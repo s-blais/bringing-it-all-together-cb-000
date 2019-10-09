@@ -69,7 +69,7 @@ class Dog
     dog
   end
 
-  def self.find_by_name(name) #WILL NOT WORK UNTIL SAVE WORKS
+  def self.find_by_name(name)
     sql = "SELECT * FROM dogs WHERE name = ?"
     result = DB[:conn].execute(sql, name)
     new_from_db(result[0])
