@@ -26,6 +26,7 @@ class Dog
   end
 
   def save
+    # "if self.id" ... business needed here?
     sql = <<-SQL
         INSERT INTO dogs (name, breed)
         VALUES (?, ?)
@@ -35,7 +36,11 @@ class Dog
       self
   end
 
-  def create
+  def create (hash)
+    dog = Dog.new
+    dog.name = hash[:name]
+    dog.breed = hash[:breed]
+    dog.save
   end
 
   def self.new_from_db(row)
