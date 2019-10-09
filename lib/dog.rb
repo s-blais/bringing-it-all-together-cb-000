@@ -15,7 +15,7 @@ class Dog
   end
 
   def initialize (id: nil, name:, breed:)
-    dog = Dog.new
+    #dog = Dog.new
     @id - id
     @name = name
     @breed = breed
