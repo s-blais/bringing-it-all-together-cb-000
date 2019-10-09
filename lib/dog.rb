@@ -14,7 +14,7 @@ class Dog
     DB[:conn].execute(sql)
   end
 
-  def initialize (id = nil, name, breed)
+  def initialize (id: = nil, name, breed)
   end
 
 
