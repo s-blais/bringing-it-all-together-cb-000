@@ -1,7 +1,7 @@
 class Dog
 
-  attr_accessor :name, :breed
-  attr_reader :id
+  attr_accessor :id, :name, :breed
+  #attr_reader :id
 
   def self.create_table
     sql = <<-SQL
@@ -16,6 +16,7 @@ class Dog
 
   def initialize (id: nil, name:, breed:)
     dog = Dog.new
+    @id - id
     @name = name
     @breed = breed
   end
