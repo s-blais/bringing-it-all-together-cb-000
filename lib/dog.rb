@@ -21,6 +21,10 @@ class Dog
     @breed = breed
   end
 
+  def self.drop_table
+    DB[:conn].execute("DROP TABLE IF EXISTS dogs")
+  end
+
 
 
 end
